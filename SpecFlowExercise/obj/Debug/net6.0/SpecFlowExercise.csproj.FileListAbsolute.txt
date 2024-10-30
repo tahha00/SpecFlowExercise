@@ -119,3 +119,4 @@ C:\Users\TahhaButt\source\repos\Projects\SpecFlowExercise\SpecFlowExercise\obj\D
 C:\Users\TahhaButt\source\repos\Projects\SpecFlowExercise\SpecFlowExercise\obj\Debug\net6.0\SpecFlowExercise.pdb
 C:\Users\TahhaButt\source\repos\Projects\SpecFlowExercise\SpecFlowExercise\obj\Debug\net6.0\SpecFlowExercise.genruntimeconfig.cache
 C:\Users\TahhaButt\source\repos\Projects\SpecFlowExercise\SpecFlowExercise\obj\Debug\net6.0\ref\SpecFlowExercise.dll
+C:\Users\TahhaButt\source\repos\Projects\SpecFlowExercise\SpecFlowExercise\obj\Debug\net6.0\SpecFlowExercise.sourcelink.json
