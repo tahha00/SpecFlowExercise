@@ -46,12 +46,9 @@ namespace SpecFlowExercise.StepDefinitions
         [Then(@"I should be logged in")]
         public void ThenIShouldBeLoggedIn()
         {
-            IWebElement loggedInStatus = WaitForEl(_driver, By.CssSelector("#menu .last span"), 10);
-            string loggedInStatusText = loggedInStatus.Text;
+            IWebElement loggedInStatus = WaitForEl(_driver, By.CssSelector("#AddRecord"));
 
-            //string loggedInStatusText = _driver.FindElement(By.CssSelector("#menu .last span")).Text;
-
-            Assert.That(loggedInStatusText, Does.Contain("Log Out"), "User is not logged in");
+            Assert.That(loggedInStatus.Displayed, Is.True, "User is not logged in as they cannot add a record");
         }
     }
 }
