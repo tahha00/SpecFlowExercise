@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpecFlowExercise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b803949fbe590b3557b4a779f33ee1673191b08")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpecFlowExercise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpecFlowExercise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
