@@ -50,7 +50,20 @@ namespace SpecFlowExercise.StepDefinitions
             IWebElement loggedInStatus = WaitForEl(_driver, By.CssSelector("#AddRecord"));
 
             Assert.That(loggedInStatus.Displayed, Is.True, "User is not logged in as they cannot add a record");
+
         }
+
+        [Then(@"I see the following nav links")]
+        public void ThenISeeTheFollowingNavLinks(Table table)
+        {
+            string results = _driver.FindElement(By.CssSelector("#menu")).Text;
+
+            foreach (TableRow tableRow in table.Rows)
+            {
+                    Assert.That(results, Does.Contain(tableRow["link"]));
+            }
+        }
+
     }
 }
 
