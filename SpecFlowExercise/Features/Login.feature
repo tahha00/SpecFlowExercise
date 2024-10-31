@@ -1,16 +1,15 @@
 ﻿Feature: Login
 
-A short summary of the feature
+Background: 
+Given I am on the login page
+When I login with 'Edgewords' and 'edgewords123'
 
-@tag1
+@SmokeTests
 Scenario: Valid Login
-	Given I am on the login page
-	When I login with 'Edgewords' and 'edgewords123'
 	Then The add record page appears
 
+@SmokeTests
 Scenario: Login Links
-	Given I am on the login page
-	When I login with 'Edgewords' and 'edgewords123'
 	Then The add record page appears
 	And I see the following nav links
 		| link          |
