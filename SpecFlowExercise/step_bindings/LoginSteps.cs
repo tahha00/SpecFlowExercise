@@ -4,29 +4,13 @@ using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
 using static SpecFlowExercise.Support.HelpersStatic;
+using static SpecFlowExercise.support.TestHooks;
 
 namespace SpecFlowExercise.StepDefinitions
 {
     [Binding]
     public class LoginSteps
     {
-
-        private IWebDriver _driver;
-
-        [Before]
-        public void SetUp()
-        {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--start-maximized");
-            _driver = new ChromeDriver(options);
-        }
-
-        [After]
-        public void TearDown()
-        {
-            Thread.Sleep(2000);
-            _driver.Quit();
-        }
 
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
