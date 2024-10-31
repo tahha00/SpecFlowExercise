@@ -2,7 +2,7 @@
 
 Background: 
 Given I am on the login page
-When I login with 'Edgewords' and 'edgewords123'
+When I login with 'edgewords' and 'edgewords123'
 
 @SmokeTests
 Scenario: Valid Login

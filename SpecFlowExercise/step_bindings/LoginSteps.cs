@@ -21,10 +21,10 @@ namespace SpecFlowExercise.StepDefinitions
 
 
         [When(@"I login with '(.*)' and '(.*)'")]
-        public void WhenILoginWithAnd(string p0, string p1)
+        public void WhenILoginWithAnd(string username, string password)
         {
-            _driver.FindElement(By.CssSelector("#username")).SendKeys("Edgewords");
-            _driver.FindElement(By.CssSelector("#password")).SendKeys("edgewords123");
+            _driver.FindElement(By.CssSelector("#username")).SendKeys(username);
+            _driver.FindElement(By.CssSelector("#password")).SendKeys(password);
             _driver.FindElement(By.LinkText("Submit")).Click();
         }
 
