@@ -35,16 +35,17 @@ namespace SpecFlowExercise.StepDefinitions
             _driver.FindElement(By.PartialLinkText("Login")).Click();
         }
 
-        [When(@"I submit my valid username and password")]
-        public void WhenISubmitMyUsernameAndPassword()
+
+        [When(@"I login with '(.*)' and '(.*)'")]
+        public void WhenILoginWithAnd(string p0, string p1)
         {
             _driver.FindElement(By.CssSelector("#username")).SendKeys("Edgewords");
             _driver.FindElement(By.CssSelector("#password")).SendKeys("edgewords123");
             _driver.FindElement(By.LinkText("Submit")).Click();
         }
 
-        [Then(@"I should be logged in")]
-        public void ThenIShouldBeLoggedIn()
+        [Then(@"The add record page appears")]
+        public void ThenTheAddRecordPageAppears()
         {
             IWebElement loggedInStatus = WaitForEl(_driver, By.CssSelector("#AddRecord"));
 
@@ -52,3 +53,23 @@ namespace SpecFlowExercise.StepDefinitions
         }
     }
 }
+
+
+
+//OLD CODE:
+
+//[When(@"I submit my valid username and password")]
+//public void WhenISubmitMyUsernameAndPassword()
+//{
+//    _driver.FindElement(By.CssSelector("#username")).SendKeys("Edgewords");
+//    _driver.FindElement(By.CssSelector("#password")).SendKeys("edgewords123");
+//    _driver.FindElement(By.LinkText("Submit")).Click();
+//}
+
+//[Then(@"I should be logged in")]
+//public void ThenIShouldBeLoggedIn()
+//{
+//    IWebElement loggedInStatus = WaitForEl(_driver, By.CssSelector("#AddRecord"));
+
+//    Assert.That(loggedInStatus.Displayed, Is.True, "User is not logged in as they cannot add a record");
+//}
