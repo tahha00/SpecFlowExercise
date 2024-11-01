@@ -5,6 +5,7 @@ using System;
 using TechTalk.SpecFlow;
 using static SpecFlowExercise.Support.HelpersStatic;
 using static SpecFlowExercise.support.TestHooks;
+using SpecFlowExercise.POMs;
 
 namespace SpecFlowExercise.StepDefinitions
 {
@@ -23,9 +24,10 @@ namespace SpecFlowExercise.StepDefinitions
         [When(@"I login with '(.*)' and '(.*)'")]
         public void WhenILoginWithAnd(string username, string password)
         {
-            _driver.FindElement(By.CssSelector("#username")).SendKeys(username);
-            _driver.FindElement(By.CssSelector("#password")).SendKeys(password);
-            _driver.FindElement(By.LinkText("Submit")).Click();
+            LoginPagePOM loginPage = new(_driver);
+            loginPage.SetUsername(username);
+            loginPage.SetPassword(password);
+            loginPage.SubmitForm();
         }
 
         [Then(@"The add record page appears")]
